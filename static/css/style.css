@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("{{ url_for('static', filename='images/ff.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  
+  .container {
+      background-color: rgb(223, 223, 223);
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 60%;
+      height: 40%;
+      max-width: 900px; /* Augmente la largeur maximale du conteneur */
+      margin: 0 auto; /* Centre le conteneur horizontalement */
+  }
+  
+  header {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+  
+  nav li {
+      margin: 0 10px;
+  }
+  
+  nav a {
+      color: white;
+      text-decoration: none;
+  }
+  
+  .search-title {
+      font-size: 52px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Pacifico', cursive;
+      animation: bounce 1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    max-width: 400px;
+    font-size: 18px;
+    width: 1000%; /* Occupe toute la largeur du conteneur */
+    max-width: 5000; /* Supprime la limite de largeur maximale */
+}
+
+.search-container button[type=submit] {
+    background-color: #0077b6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Ajoute un espace entre le champ de recherche et le bouton */
+}
+
+
+.top-left-dropdown {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #005b8c;
+}
