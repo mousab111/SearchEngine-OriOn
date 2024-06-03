@@ -40,8 +40,7 @@ class WordEmbeddingModel:
         else:
             raise ValueError("Please train the model first")
             
-            
-            
+    
             
 
     def search_similar_words(self, word, topn=5):
